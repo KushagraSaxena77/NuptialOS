@@ -1,4 +1,4 @@
-# NuptialOS
+# NuptialOS LangChain
 
 NuptialOS is a multi agent wedding planning assistant built with LangChain and LangGraph. It combines specialist agents for travel, venues and music to produce a structured wedding plan from natural language requirements.
 
