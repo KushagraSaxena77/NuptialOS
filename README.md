@@ -4,6 +4,11 @@ NuptialOS is a multi agent wedding planning assistant built with LangChain and L
 
 The application is designed to preserve wedding details across a conversation, delegate each planning task to the appropriate specialist and combine the returned information through a central coordinator.
 
+You may trace your agent thinking in LangSmith, similar like this.
+
+
+<img width="1509" height="786" alt="image" src="https://github.com/user-attachments/assets/0521dabd-b4d3-414f-9a02-df7ea0655761" />
+
 ## Features
 
 1. Extracts the wedding origin, destination, guest count, music genre and travel dates from a user request.
@@ -75,6 +80,8 @@ Start Ollama and download the model named in `config.py` using the corresponding
 ```bash
 ollama serve
 ```
+> [!NOTE]
+> You may use AI LLM of your choice, just configure your API Key in .env file and change your model in config.py
 
 ## Running the application
 
@@ -155,6 +162,8 @@ uv run langgraph dev
 
 This starts the configured graph using the local project environment.
 
+<img width="727" height="796" alt="image" src="https://github.com/user-attachments/assets/4d0fdffb-cd20-4664-a7e5-165629a078ca" />
+
 ## Development notes
 
 1. The coordinator updates state before calling specialist tools.
@@ -163,6 +172,7 @@ This starts the configured graph using the local project environment.
 4. The current checkpoint uses in memory storage, so state is not retained after the process stops.
 5. The current command line interface is intended for local interactive use.
 
-## License
+---
+## Author
 
-No licence has been specified for this repository.
+Kushagra Saxena
