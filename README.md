@@ -4,10 +4,19 @@ NuptialOS is a multi agent wedding planning assistant built with LangChain and L
 
 The application is designed to preserve wedding details across a conversation, delegate each planning task to the appropriate specialist and combine the returned information through a central coordinator.
 
+> Example Usage - 
+```bash
+I am in London, I want to have a wedding in Paris. Guest count would be 200 people and I want jazz genre of music in my wedding.My
+boarding date should be 12-11-2026 and return date should be 17-11-2026
+```
+
+
 You may trace your agent thinking in LangSmith, similar like this.
 
 
 <img width="1509" height="786" alt="image" src="https://github.com/user-attachments/assets/0521dabd-b4d3-414f-9a02-df7ea0655761" />
+
+---
 
 ## Features
 
@@ -18,7 +27,7 @@ You may trace your agent thinking in LangSmith, similar like this.
 5. Retrieves music recommendations from the included Chinook SQLite database.
 6. Coordinates specialist results into one wedding plan.
 7. Supports follow up questions through an in memory conversation checkpoint.
-
+---
 ## Architecture
 
 The application uses a coordinator and three specialist agents.
@@ -43,7 +52,7 @@ The main workflow is:
 3. The coordinator stores the details in the wedding state.
 4. Relevant specialist agents run their searches.
 5. The coordinator combines the specialist results into a final plan.
-
+---
 ## Requirements
 
 1. Python 3.13 or a compatible later version.
@@ -51,7 +60,7 @@ The main workflow is:
 3. Ollama with the model configured in `config.py`.
 4. A Tavily API key for venue research.
 5. Network access to the Kiwi MCP service for flight searches.
-
+---
 ## Installation
 
 Clone the repository and enter the project directory:
@@ -80,8 +89,8 @@ Start Ollama and download the model named in `config.py` using the corresponding
 ```bash
 ollama serve
 ```
-> [!NOTE]
-> You may use AI LLM of your choice, just configure your API Key in .env file and change your model in config.py
+> [!TIP]
+> You may use any AI LLM of your choice, just configure your API Key in .env file and change your model in config.py.
 
 ## Running the application
 
@@ -100,7 +109,7 @@ I am in London and want to have a wedding in Paris for 200 guests. I would like 
 ```
 
 The coordinator expects travel dates in day, month, year order. It stores them as `DD MM YYYY` values for the flight specialist.
-
+---
 ## Configuration
 
 Configuration is loaded from `.env` through `python dotenv`.
@@ -117,7 +126,7 @@ Configuration is loaded from `.env` through `python dotenv`.
    LangSmith project name.
 
 The language model, temperature and context size are configured in `config.py`.
-
+---
 ## Data sources and integrations
 
 ### Kiwi MCP
@@ -151,7 +160,7 @@ NuptialOS
     pyproject.toml
     state.py
 ```
-
+---
 ## LangGraph development server
 
 The graph is registered in `langgraph.json` under the name `wedding_planner`. To use the LangGraph command line interface, run:
