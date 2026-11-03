@@ -5,10 +5,10 @@ NuptialOS is a multi agent wedding planning assistant built with LangChain and L
 The application is designed to preserve wedding details across a conversation, delegate each planning task to the appropriate specialist and combine the returned information through a central coordinator.
 
 Example Usage: 
-
-> I am in London, I want to have a wedding in Paris. Guest count would be 200 people and I want jazz genre of music in my wedding.My
+```text
+I am in London, I want to have a wedding in Paris. Guest count would be 200 people and I want jazz genre of music in my wedding.My
  boarding date should be 12-11-2026 and return date should be 17-11-2026.
-
+```
 
 You may trace your agent thinking in LangSmith, similar like this.
 
