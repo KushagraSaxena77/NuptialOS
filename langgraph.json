@@ -1,0 +1,11 @@
+
+{
+  "python_version": "3.13",
+  "graphs": {
+    "wedding_planner": "./agents/coordinator.py:build_coordinator"
+  },
+  "env": ".env",
+  "source": {
+    "kind": "uv"
+  }
+}
